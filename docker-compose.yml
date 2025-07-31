@@ -1,0 +1,7 @@
+services:
+  ssh:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: alpine-ssh-container
+    network_mode: "host"
