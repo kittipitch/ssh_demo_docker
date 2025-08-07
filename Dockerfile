@@ -1,4 +1,4 @@
-FROM alpine:3.17
+FROM alpine:3.22
 
 # Install OpenSSH server, rsync, and other necessary packages
 RUN apk update && \
@@ -31,4 +31,5 @@ RUN echo "Sample file for SFTP/rsync demo" > /home/user/sample.txt && \
 EXPOSE 22
 
 # Start SSH server
+
 CMD ["/usr/sbin/sshd", "-D"]
